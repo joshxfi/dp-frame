@@ -72,7 +72,8 @@ export default function Home() {
         {profilePic && (
           <Draggable>
             <Resizable>
-              <img
+              <Image
+                quality={100}
                 src={profilePic}
                 height={500}
                 width={500}
