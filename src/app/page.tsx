@@ -10,6 +10,8 @@ import frame from "../../public/frame.png";
 
 export default function Home() {
   const [profilePic, setProfilePic] = useState("");
+  const [frameOpacity, setFrameOpacity] = useState(1);
+
   const ref = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -67,19 +69,24 @@ export default function Home() {
           ref={ref}
           className="relative overflow-hidden md:h-[500px] md:w-[500px] h-[350px] w-[350px]"
         >
-          <Image
-            priority
-            quality={100}
-            src={frame}
-            placeholder="blur"
-            height={500}
-            width={500}
-            className="object-contain absolute pointer-events-none z-10"
-            alt="Profile Picture"
-          />
+          <div style={{ opacity: frameOpacity }} className="z-50 relative">
+            <Image
+              priority
+              quality={100}
+              src={frame}
+              placeholder="blur"
+              height={500}
+              width={500}
+              className="object-contain absolute pointer-events-none z-50"
+              alt="DP Frame"
+            />
+          </div>
 
           {profilePic && (
-            <Draggable>
+            <Draggable
+              onStart={() => setFrameOpacity(0.8)}
+              onStop={() => setFrameOpacity(1)}
+            >
               <div>
                 <TransformWrapper>
                   <TransformComponent>
