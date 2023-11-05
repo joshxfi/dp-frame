@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-12 space-x-3">
+      <div className="mt-12 space-x-3 text-sm md:text-base">
         <button
           onClick={() => inputRef.current?.click()}
           className="bg-slate-800 px-5 py-2 rounded"
@@ -123,6 +123,17 @@ export default function Home() {
           Save Image
         </button>
       </div>
+      <p className="text-purple-200 absolute bottom-5 text-xs md:text-sm">
+        MIT Licensed.{" "}
+        <a
+          href="https://github.com/joshxfi/dp-frame"
+          target="_blank"
+          rel="noreferrer noopener"
+          className=" underline"
+        >
+          View Source Code
+        </a>
+      </p>
     </main>
   );
 }
