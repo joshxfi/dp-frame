@@ -88,7 +88,7 @@ export default function Home() {
                       src={profilePic}
                       height={500}
                       width={500}
-                      className="object-contain"
+                      className="object-contain scale-50"
                       alt="Profile Picture"
                       draggable={false}
                     />
