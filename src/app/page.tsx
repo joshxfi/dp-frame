@@ -6,6 +6,7 @@ import Draggable from "react-draggable";
 import { Resizable } from "re-resizable";
 import { toPng } from "html-to-image";
 import toast from "react-hot-toast";
+import frame from "../../public/frame.png";
 
 export default function Home() {
   const [profilePic, setProfilePic] = useState("");
@@ -35,7 +36,7 @@ export default function Home() {
     toast.promise(
       toPng(ref.current, {
         cacheBust: true,
-        pixelRatio: 5,
+        pixelRatio: 3,
       })
         .then((dataUrl) => {
           const link = document.createElement("a");
@@ -58,7 +59,10 @@ export default function Home() {
 
       <div ref={ref} className="relative overflow-hidden h-[500px] w-[500px]">
         <Image
-          src="/frame.png"
+          priority
+          quality={100}
+          src={frame}
+          placeholder="blur"
           height={500}
           width={500}
           className="object-contain absolute pointer-events-none z-10"
