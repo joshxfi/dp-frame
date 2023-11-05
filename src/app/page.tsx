@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useState, useCallback, useRef } from "react";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Draggable from "react-draggable";
-import { Resizable } from "re-resizable";
 import { toPng } from "html-to-image";
 import toast from "react-hot-toast";
 import frame from "../../public/frame.png";
@@ -80,17 +80,19 @@ export default function Home() {
 
           {profilePic && (
             <Draggable>
-              <Resizable>
-                <Image
-                  quality={100}
-                  src={profilePic}
-                  height={500}
-                  width={500}
-                  className="object-contain"
-                  alt="Profile Picture"
-                  draggable={false}
-                />
-              </Resizable>
+              <TransformWrapper>
+                <TransformComponent>
+                  <Image
+                    quality={100}
+                    src={profilePic}
+                    height={500}
+                    width={500}
+                    className="object-contain"
+                    alt="Profile Picture"
+                    draggable={false}
+                  />
+                </TransformComponent>
+              </TransformWrapper>
             </Draggable>
           )}
         </div>
