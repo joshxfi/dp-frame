@@ -53,7 +53,7 @@ export default function Home() {
   }, [ref]);
 
   return (
-    <main className="flex items-center flex-col justify-center min-h-screen bg-black">
+    <main className="flex items-center flex-col justify-center min-h-screen bg-black text-white">
       <input
         ref={inputRef}
         type="file"
@@ -111,7 +111,7 @@ export default function Home() {
         <button
           disabled={!profilePic}
           onClick={saveImage}
-          className="bg-purple-500 rounded px-5 py-2 disabled:bg-purple-500/50 disabled:cursor-not-allowed"
+          className="bg-purple-600 rounded px-5 py-2 disabled:bg-purple-600/50 disabled:cursor-not-allowed"
         >
           Save Image
         </button>
