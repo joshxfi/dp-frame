@@ -80,19 +80,21 @@ export default function Home() {
 
           {profilePic && (
             <Draggable>
-              <TransformWrapper>
-                <TransformComponent>
-                  <Image
-                    quality={100}
-                    src={profilePic}
-                    height={500}
-                    width={500}
-                    className="object-contain"
-                    alt="Profile Picture"
-                    draggable={false}
-                  />
-                </TransformComponent>
-              </TransformWrapper>
+              <div>
+                <TransformWrapper>
+                  <TransformComponent>
+                    <Image
+                      quality={100}
+                      src={profilePic}
+                      height={500}
+                      width={500}
+                      className="object-contain"
+                      alt="Profile Picture"
+                      draggable={false}
+                    />
+                  </TransformComponent>
+                </TransformWrapper>
+              </div>
             </Draggable>
           )}
         </div>
