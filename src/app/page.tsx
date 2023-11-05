@@ -65,13 +65,15 @@ export default function Home() {
       <div className="overflow-hidden rounded-2xl">
         <div
           ref={ref}
-          className="relative overflow-hidden max-h-[500px] max-w-[500px] h-[350px] w-[350px] md:h-auto md:w-auto"
+          className="relative overflow-hidden md:h-[500px] md:w-[500px] h-[350px] w-[350px]"
         >
           <Image
             priority
             quality={100}
             src={frame}
             placeholder="blur"
+            height={500}
+            width={500}
             className="object-contain absolute pointer-events-none z-10"
             alt="Profile Picture"
           />
