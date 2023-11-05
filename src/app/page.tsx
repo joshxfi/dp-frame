@@ -53,7 +53,7 @@ export default function Home() {
   }, [ref]);
 
   return (
-    <main className="flex items-center flex-col justify-center min-h-screen">
+    <main className="flex items-center flex-col justify-center min-h-screen bg-black">
       <input
         ref={inputRef}
         type="file"
