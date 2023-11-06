@@ -1,7 +1,7 @@
 # DP Frame Overlay
 This is a simple implementation of a frame overlayer that allows you to upload your photo with image controls such as drag and zoom to fit in the frame.
 > [!NOTE]
-> This small project is inspired by [Twibbonzie](https://www.twibbonize.com/) _"Where Campaign Meets You"_
+> This small project is inspired by [Twibbonize](https://www.twibbonize.com/) _"Where Campaign Meets You"_
 
 ## Run Locally
 ```sh
